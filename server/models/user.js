@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema(
 userSchema
     .virtual('password')
     .set(function(password) {
-        // variable temporal  _password
+        // create a temporarity variable called _password
         this._password = password;
         // generate salt
         this.salt = this.makeSalt();
